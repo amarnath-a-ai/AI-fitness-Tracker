@@ -1,0 +1,128 @@
+.dashboard-layout {
+  min-height: 100vh;
+  background: var(--bg-secondary);
+}
+
+.dashboard-main {
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  backdrop-filter: blur(12px);
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.topbar-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-tertiary);
+  border-radius: var(--border-radius);
+  padding: 0 12px;
+  max-width: 400px;
+  flex: 1;
+  color: var(--text-tertiary);
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.topbar-search:focus-within {
+  border-color: var(--primary-500);
+  background: var(--bg-card);
+}
+
+.topbar-search .input {
+  border: none;
+  background: transparent;
+  padding: 8px 4px;
+  font-size: 0.85rem;
+  flex: 1;
+}
+
+.topbar-search .input:focus {
+  box-shadow: none;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.notification-btn {
+  position: relative;
+  color: var(--text-secondary);
+}
+
+.notification-dot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 8px;
+  height: 8px;
+  background: var(--danger-500);
+  border-radius: 50%;
+  border: 2px solid var(--bg-card);
+}
+
+.topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dashboard-content {
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+  animation: fadeIn 0.3s ease;
+}
+
+.mobile-menu {
+  display: none;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .dashboard-main {
+    margin-left: 0 !important;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  .topbar-search {
+    max-width: 200px;
+  }
+
+  .dashboard-content {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar-search {
+    display: none;
+  }
+  
+  .topbar {
+    padding: 12px 16px;
+  }
+}

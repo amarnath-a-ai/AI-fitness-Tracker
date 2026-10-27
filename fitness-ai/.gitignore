@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.next/
+
+# Environment
+.env
+.env.local
+.env.production
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build
+*.tsbuildinfo
+
+# Coverage
+coverage/
+.nyc_output/
+
+# ML Models (large files)
+ai-service/data/models/*.joblib
+ai-service/data/models/*.pkl
+ai-service/data/models/*.h5
+ai-service/data/*.csv
+
+# Uploads
+server/uploads/
+
+# Docker
+.dockerignore
